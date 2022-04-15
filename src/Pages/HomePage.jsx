@@ -1,4 +1,4 @@
-import { CategoryCard } from "./Category/category-card";
+import { CategoryCard } from "../components/Category/category-card";
 import { Navigation, Footer } from "../components/Components";
 import "../stylesheets/homepage.css"
 
