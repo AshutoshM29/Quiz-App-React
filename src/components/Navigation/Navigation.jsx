@@ -15,13 +15,13 @@ return (
         </div>
         <ul className="nav-bar-links nav-section-items">
             <li className="list-inline-item">
-                <a className="link" href="/trending">Trending</a>
+                <Link className="link" href="/trending">Trending</Link>
             </li>
             <li className="list-inline-item">
-                <a className="link" href="/new">New</a>
+                <Link className="link" href="/new">New</Link>
             </li>
             <li className="list-inline-item">
-                <a className="link" href="/grooming">For You</a>
+                <Link className="link" href="/grooming">For You</Link>
             </li>
         </ul>
     </div>
