@@ -1,0 +1,27 @@
+footer {
+    min-width: 100vw;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    background-image: linear-gradient(to right, #d00000, #e85d04, #faa307, #ffba08);
+    color: var(--white);
+    box-shadow: 0 0 2rem 0.2rem var(--gray-light);
+    margin-top: 5rem;
+  }
+
+  .with-love  {
+    font-size: large;
+  }
+  
+  .social-links {
+    padding-inline-start: 0px;
+  }
+  
+  .list-item {
+    display: inline;
+  }
+  
+  .fab {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }

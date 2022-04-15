@@ -1,0 +1,51 @@
+.section-top {
+    margin: 4rem 2rem 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-top {
+    color: var(--secondary-color);
+}
+
+.desc-top {
+    color: var(--forth-color);
+}
+
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.btn-primary-solid {
+    background-color: var(--third-color);
+    color: var(--white);
+}
+
+.btn-primary-solid:hover {
+    background-color: var(--forth-color);
+}
+
+.card-vertical-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    height: 35rem;
+}
+
+.btn-tom {
+    background: transparent;
+    border-style: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: -1rem;
+}
