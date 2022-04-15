@@ -1,0 +1,31 @@
+main {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    margin-top: 0rem;
+    background-image: linear-gradient(to right, #d00000, #e85d04, #faa307, #ffba08);
+}
+
+.img-hero {
+    width: 40%;
+    margin: 1rem;
+}
+
+.section-hero {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+}
+
+.btn-launch {
+    font-size: 2rem;
+    width: fit-content;
+    font-weight: 600;
+}
+
+.btn-launch:hover {
+    background-color: var(--third-color);
+    color: var(--white);
+}
