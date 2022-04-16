@@ -1,8 +1,24 @@
-import { CategoryCard } from "../components/Category/category-card";
+import { CategoryCard } from "./Category/category-card";
+import Categories from "../Data/category-list";
+import { useQuiz } from "../Context/quiz-context";
 import { Navigation, Footer } from "../components/Components";
 import "../stylesheets/homepage.css"
 
 function HomePage() {
+  let categoryList = Categories;
+
+  const {
+    state: { search_query },
+    dispatch,
+    fetchQues,
+  } = useQuiz();
+
+  if (search_query) {
+    categoryList = Categories.filter((item) =>
+      item.category.toLowerCase().includes(search_query)
+    );
+  }
+
   return (
     <>
     <Navigation />
@@ -16,9 +32,10 @@ function HomePage() {
           categoryList.map((item) => {
             return (
               <CategoryCard
-                key={item.value}
-                value={item.value}
-                item={item.category}
+                key = {item.value}
+                value = {item.value}
+                item = {item.category}
+                img = {item.image}
               />
             );
           })}
