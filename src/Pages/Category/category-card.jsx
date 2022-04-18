@@ -1,19 +1,33 @@
-function CategoryCard(props) {
+import { useNavigate } from "react-router-dom";
+import { useQuiz } from "../../Context/quiz-context";
+import "../../stylesheets/homepage.css"
 
+function CategoryCard(props) {
+  const navigateTo = useNavigate();
+  const { dispatch, fetchQues, apiError } = useQuiz();
+
+  function navigateToRules() {
+    fetchQues(props.value);
+    if(apiError){
+      navigateTo("*")
+    }else{
+      navigateTo("/Rules")
+    }
+  }
   return (
     <>
       <div className="card card-vertical">
         <div className="card-head">
           <img
             className="card-vertical-img"
-            src="https://images.unsplash.com/photo-1606326608690-4e0281b1e588?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            src={props.img}
             alt="category image"
           />
         </div>
         <div className="card-body text-center color-primary">
           <h3> {props.item} </h3>
           <div className="card-vertical-footer">
-            <button className="btn btn-primary-solid">
+            <button onClick={navigateToRules} className="btn btn-primary-solid">
               Play Now
             </button>
             <button title="Add to favotites" class="btn-tom"><i class="fa fa-heart-o"></i></button>

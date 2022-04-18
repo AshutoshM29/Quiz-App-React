@@ -1,10 +1,26 @@
 import { Link } from 'react-router-dom'
 import "./navigation.css"
+import Categories from "../../Data/category-list";
+import { useQuiz } from "../../Context/quiz-context";
 import {
 qLogo,
 } from '../../assets/images'
 
 function Navigation() {
+    let categoryList = Categories;
+    
+    const {
+        state: { search_query },
+        dispatch,
+        fetchQues,
+      } = useQuiz();
+    
+      if (search_query) {
+        categoryList = Categories.filter((item) =>
+          item.category.toLowerCase().includes(search_query)
+        );
+      }
+
 return (
 <nav className="nav-header nav-bar">
     <div className="nav-section">
@@ -15,13 +31,13 @@ return (
         </div>
         <ul className="nav-bar-links nav-section-items">
             <li className="list-inline-item">
-                <Link className="link" href="/trending">Trending</Link>
+                <a className="link" href="/trending">Trending</a>
             </li>
             <li className="list-inline-item">
-                <Link className="link" href="/new">New</Link>
+                <a className="link" href="/new">New</a>
             </li>
             <li className="list-inline-item">
-                <Link className="link" href="/grooming">For You</Link>
+                <a className="link" href="/grooming">For You</a>
             </li>
         </ul>
     </div>
@@ -31,7 +47,9 @@ return (
             <span className="search-bar-btn" type="submit">
                 <i className="fa fa-search"></i>
             </span>
-            <input className="search-bar-input" type="text" placeholder="Search a quiz!" name="search"></input>
+            <input onChange={(e) => {
+            dispatch({ type: "search_query", payload: e.target.value });
+          }} className="search-bar-input" type="text" placeholder="Search a quiz!" name="search"></input>
         </label>
         <ul className="nav-icons">
             <li className="list-inline-icons">

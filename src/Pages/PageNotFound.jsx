@@ -1,9 +1,14 @@
+import {useQuiz} from "../Context/quiz-context"
 function PageNotFound() {
+  const {apiError} = useQuiz()
   return (
-
-        <h1 >
-          Something went wrong! try again
-        </h1>
+      <div className="section-quiz">
+        <h1>
+          {
+            apiError === true ? "Something went wrong! try again" : "ERROR: 404 - Page Not Found"
+          }
+          </h1>
+      </div>
   );
 }
 

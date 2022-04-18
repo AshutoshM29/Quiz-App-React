@@ -18,8 +18,9 @@
 .container-card {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
     justify-content: space-evenly;
+    margin-left: 8rem;
+    gap: 5rem;
 }
 
 .btn-primary-solid {
@@ -48,4 +49,9 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     margin-top: -1rem;
+}
+
+.card-vertical-img {
+    width: 25rem;
+    height: 20rem;
 }
