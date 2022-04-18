@@ -11,11 +11,9 @@ function Quiz() {
 
   } = useQuiz();
 
-
   function createMarkup(text){
     return {__html : text};
   }
-
 
   function optionHandler(i) {
     dispatch({type:"Selected", payload:true})
@@ -108,6 +106,5 @@ function Quiz() {
     </>
   );
 }
-
 
 export { Quiz };

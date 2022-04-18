@@ -126,8 +126,6 @@ import {
 	  }
 	}, [state.ques, state.index]);
   
-	console.log("score from context ", state);
-  
 	return (
 	  <QuizContext.Provider
 		value={{
