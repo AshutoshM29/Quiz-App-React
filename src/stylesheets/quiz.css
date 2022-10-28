@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Dosis:wght@400;500;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-size: 1.6rem;
+  margin: auto;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Nunito', sans-serif;
+}
+
 /* Rules */
 
 .section-rules {
@@ -12,21 +25,29 @@
   width: 100%;
   height: auto;
   position: fixed;
-  top: 8rem;
+  top: 4rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
 }
 
 .text-rules {
   padding: 1rem;
   font-size: 2.5rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .footer-rules {
-  margin-bottom: -2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .list-rules {
   border-bottom: solid 2px var(--white);
+  padding-bottom: 1.2rem;
   margin-bottom: 2rem;
 }
 
@@ -43,7 +64,7 @@
   font-weight: 600;
 }
 
-.btn-play:hover {
+.btn-play :hover {
   color: var(--secondary-color);
 }
 
@@ -53,7 +74,7 @@
   font-weight: 500;
 }
 
-.btn-quit:hover {
+.btn-quit :hover {
   color: var(--white);
 }
 
@@ -111,13 +132,19 @@
   justify-content: space-between;
 }
 
+.footer-quiz .btn-play:hover {
+  color: var(--white);
+  background-color: var(--secondary-color);
+  border: solid 1px var(--white);
+}
+
 .header-loading {
   padding: 2rem;
   width: 100%;
   margin-left: 0rem;
 }
 
-/* Rules */
+/* Result */
 
 .section-result {
   color: var(--white);
@@ -130,7 +157,7 @@
   min-width: 1024px;
   width: 100%;
   height: auto;
-  top: 8rem;
+  margin-bottom: -5rem;
 }
 
 .section-head {
