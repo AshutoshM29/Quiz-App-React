@@ -1,6 +1,6 @@
 import { useQuiz } from "../../Context/quiz-context";
 import { Link } from "react-router-dom";
-import { Navigation } from "../../components/Components";
+import { Footer, Navigation } from "../../components/Components";
 
 function Results() {
   const {
@@ -39,7 +39,7 @@ function Results() {
             className="link"
             to="/HomePage"
           >
-            <h3 className="link-again">Take Another Quiz <i class="fas fa-redo"></i></h3>
+            <h3 className="link-again">Take Another Quiz <i className="fas fa-redo"></i></h3>
           </Link>
         </div>
       <div className="container">
@@ -78,6 +78,7 @@ function Results() {
           : " "}
       </div>
       </div>
+      <Footer />
     </>
   );
 }
