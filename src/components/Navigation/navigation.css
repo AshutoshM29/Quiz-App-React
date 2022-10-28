@@ -76,11 +76,13 @@ input:focus {
 }
 
 .search-bar {
-    background-color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--secondary-color);
+    border: solid var(--secondary-color) 2px;
+    width: 30%;
+    margin: 2rem;
     border-radius: 5rem;
     justify-self: right;
 }
@@ -104,6 +106,6 @@ input:focus {
 
 .section-end {
     display: flex;
-    margin-left: 22rem;
+    margin-left: 52rem;
     width: 100%;
 }
