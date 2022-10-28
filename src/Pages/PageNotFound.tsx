@@ -1,7 +1,12 @@
 import {useQuiz} from "../Context/quiz-context"
+import "../stylesheets/quiz.css"
+import { Navigation } from "../components/Components";
+
 function PageNotFound() {
   const {apiError} = useQuiz()
   return (
+    <>
+    <Navigation />
       <div className="section-quiz">
         <h1>
           {
@@ -9,6 +14,7 @@ function PageNotFound() {
           }
           </h1>
       </div>
+    </>
   );
 }
 
